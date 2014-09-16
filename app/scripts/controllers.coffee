@@ -5,46 +5,63 @@ angular.module('adhdApp')
     $scope.fb = new Formbuilder(
       selector: ".fb-main"
       bootstrapData: [
-        {
-          label: "Do you have a website?"
-          field_type: "website"
-          required: false
-          field_options: {}
-          cid: "c1"
-        }
-        {
-          label: "Please enter your clearance number"
-          field_type: "text"
-          required: true
-          field_options: {}
-          cid: "c6"
-        }
-        {
-          label: "Security personnel #82?"
+          label: "Fail to give close attention to details or made careless mistakes in my work"
           field_type: "radio"
           required: true
           field_options:
             options: [
-              {
-                label: "Yes"
+                label: "Never or Rarely"
                 checked: false
-              }
-              {
-                label: "No"
+              ,
+                label: "Sometimes"
                 checked: false
-              }
+              ,
+                label: "Often"
+                checked: false
+              ,
+                label: "Very Often"
+                checked: false
             ]
-            include_other_option: true
-
-          cid: "c10"
-        }
-        {
-          label: "Medical history"
-          field_type: "file"
+          cid: "c1"
+        ,
+          label: "Fidget with hands or feet or squirm"
+          field_type: "radio"
           required: true
-          field_options: {}
-          cid: "c14"
-        }
+          field_options:
+            options: [
+                label: "Never or Rarely"
+                checked: false
+              ,
+                label: "Sometimes"
+                checked: false
+              ,
+                label: "Often"
+                checked: false
+              ,
+                label: "Very Often"
+                checked: false
+            ]
+          cid: "c1"
+        ,
+          label: "Have difficulty sustaining my attention in tasks or fun activities"
+          field_type: "radio"
+          required: true
+          field_options:
+            options: [
+                label: "Never or Rarely"
+                checked: false
+              ,
+                label: "Sometimes"
+                checked: false
+              ,
+                label: "Often"
+                checked: false
+              ,
+                label: "Very Often"
+                checked: false
+            ]
+          cid: "c1"
+        ,
       ]
     )
     $scope.fb.on "save", (payload) ->
