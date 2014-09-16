@@ -37,12 +37,13 @@ def index():
 def favicon():
     return send_from_directory(app.root_path + '/dist/', 'favicon.ico')
 
-if __name__ == '__main__':
+
+def main(port=5000, host='127.0.0.1'):
     # Heroku support: bind to PORT if defined, otherwise default to 5000.
     if 'PORT' in environ:
         port = int(environ.get('PORT'))
         host = '0.0.0.0'
-    else:
-        port = 5000
-        host = '127.0.0.1'
     app.run(host=host, port=port)
+
+if __name__ == '__main__':
+    main()
