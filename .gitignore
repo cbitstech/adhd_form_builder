@@ -44,6 +44,9 @@ dist
 .sass-cache
 app/bower_components
 
+# Heroku
+.env
+
 # Virtualenv
 .venv
 
