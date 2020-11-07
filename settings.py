@@ -1,7 +1,6 @@
 """Global API configuration."""
 
 from os import environ
-from urlparse import urlparse
 from schemas import question_schema, question_response_schema, user_response_schema
 
 API_NAME = 'ADHD'
@@ -10,12 +9,7 @@ if 'EVE_DEBUG' in environ:
     DEBUG = True
 
 if 'MONGOLAB_URI' in environ:
-    url = urlparse(environ['MONGOLAB_URI'])
-    MONGO_HOST = url.hostname
-    MONGO_PORT = url.port
-    MONGO_USERNAME = url.username
-    MONGO_PASSWORD = url.password
-    MONGO_DBNAME = url.path[1:]
+    MONGO_URI = environ['MONGOLAB_URI']
 else:
     MONGO_DBNAME = API_NAME
 
