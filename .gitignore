@@ -43,3 +43,9 @@ dist
 .tmp
 .sass-cache
 app/bower_components
+
+# Virtualenv
+.venv
+
+# VSCode
+.vscode
