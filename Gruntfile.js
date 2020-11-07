@@ -61,6 +61,14 @@ module.exports = function (grunt) {
       }
     },
 
+    bower: {
+      install: {
+        options: {
+          copy: false
+        }
+      }
+    },
+
     // The actual grunt server settings
     connect: {
       proxies: [
@@ -403,6 +411,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'bower',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
