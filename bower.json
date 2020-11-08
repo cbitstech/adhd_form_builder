@@ -2,7 +2,7 @@
   "name": "adhd-form-builder",
   "version": "0.0.0",
   "dependencies": {
-    "formbuilder": "gh-pages"
+    "formbuilder": "https://github.com/kynan/formbuilder.git#gh-pages"
   },
   "appPath": "app"
 }
