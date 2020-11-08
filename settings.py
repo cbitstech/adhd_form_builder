@@ -8,8 +8,8 @@ URL_PREFIX = 'api'
 if 'EVE_DEBUG' in environ:
     DEBUG = True
 
-if 'MONGOLAB_URI' in environ:
-    MONGO_URI = environ['MONGOLAB_URI']
+if 'MONGO_URI' in environ:
+    MONGO_URI = environ['MONGO_URI']
 else:
     MONGO_DBNAME = API_NAME
 
