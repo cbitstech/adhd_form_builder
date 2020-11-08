@@ -28,6 +28,11 @@ def views(filename):
     return send_from_directory(app.root_path + '/dist/views/', filename)
 
 
+@app.route('/fonts/<path:filename>')
+def fonts(filename):
+    return send_from_directory(app.root_path + '/dist/fonts/', filename)
+
+
 @app.route("/")
 def index():
     return send_from_directory(app.root_path + '/dist/', 'index.html')
